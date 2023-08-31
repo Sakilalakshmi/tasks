@@ -1,5 +1,6 @@
 #!/bin/bash
 
 file_path= "D/sample.txt"
-output=$(sed -r 's/\s+/\n/g' sample.txt | grep -v "^$" | sort)
+output=$(cat $file_path % tr ' ' '\n' | sort | uniq -c | \
+awk '{print $2"@"$1}' > myFile.txt)
 echo "$ouput"
