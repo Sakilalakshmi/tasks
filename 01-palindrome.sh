@@ -4,7 +4,7 @@ echo "Enter your string"
 read s
 echo $s > tmp
 reverse="$(reverse tmp)"
-if [ $s = $reverse ]
+if [ $s = $reverse ];
 then 
 echo "It is a palindrome"
 else
